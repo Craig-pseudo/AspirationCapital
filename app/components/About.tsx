@@ -2,8 +2,8 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section className="text-[#C8C8C8] border-b-2 border-[#C8C8C8] pb-6 mb-6 px-6 font-sans">
-      <h2 className="font-semibold text-2xl mb-4 tracking-wide drop-shadow-sm">
+    <section className="bg-[#333333] text-[#C8C8C8] border-b-2 border-[#C8C8C8] pt-2 pb-6 mb-0 px-6 font-sans">
+      <h2 className="font-semibold text-3xl mb-4 tracking-wide ">
         About
       </h2>
       <p className="leading-relaxed tracking-wide">

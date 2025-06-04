@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
   return (
    <div 
    id="contact"
-   className="flex flex-col md:flex-row border-b-2 border-[#C8C8C8] bg-[#333333] text-[#C8C8C8] p-6 md:p-12">
+   className="flex flex-col md:flex-row border-b border-[#C8C8C8] bg-[#333333] text-[#C8C8C8] p-6 md:p-8">
       {/* Left: Contact Form */}
       <div className="md:w-1/2 max-w-md">
         <h2 className="text-3xl font-bold mb-6">Contact Us</h2>

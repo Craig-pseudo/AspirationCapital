@@ -37,7 +37,7 @@ const Portfolio: React.FC = () => {
   return (
     <section
       id="portfolio"
-      className="bg-[#333333] text-[#C8C8C8] py-16 px-6 md:px-12"
+      className="bg-[#333333] text-[#C8C8C8] border-b-2 border-[#C8C8C8] py-8 px-6 md:px-12"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">Portfolio</h2>
