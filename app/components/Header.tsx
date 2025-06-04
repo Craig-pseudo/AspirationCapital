@@ -30,8 +30,13 @@ const Header = () => {
       </nav>
 
         </div>
-        <div className='h-8 w-25 rounded-md m-2 flex justify-center items-center text-[#333333] bg-[#C8C8C8]'>Contact Us</div>
-    </div>
+        <a
+         href="#contact"
+         className="h-8 px-4 rounded-md bg-[#C8C8C8] text-[#333333] flex items-center justify-center hover:bg-[#b0b0b0] transition"
+         >
+         Contact Us
+      </a>   
+</div>
   )
 }
 
