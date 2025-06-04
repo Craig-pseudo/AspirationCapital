@@ -40,7 +40,7 @@ const Portfolio: React.FC = () => {
       className="bg-[#333333] text-[#C8C8C8] py-16 px-6 md:px-12"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">Portfolio</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">Portfolio</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {portfolioItems.map(({ id, title, description, imageUrl, link }) => (
