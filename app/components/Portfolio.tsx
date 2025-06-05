@@ -37,16 +37,16 @@ const Portfolio: React.FC = () => {
   return (
     <section
       id="portfolio"
-      className="bg-[#333333] text-[#C8C8C8] border-b-2 border-[#C8C8C8] py-8 px-6 md:px-12"
+      className="bg-[#F5F3EF] text-[#2D2D2D] border-b-2 border-[#E6E6E6] py-8 px-6 md:px-12"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         <h2 className="text-3xl font-bold mb-12 text-center">Portfolio</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {portfolioItems.map(({ id, title, description, imageUrl, link }) => (
             <div
               key={id}
-              className="bg-[#444444] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="bg-[#FDFCF9] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <img
                 src={imageUrl}
@@ -55,13 +55,13 @@ const Portfolio: React.FC = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{title}</h3>
-                <p className="text-[#C8C8C8] mb-4">{description}</p>
+                <p className="text-[#2D2D2D] mb-4">{description}</p>
                 {link && (
                   <a
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block text-[#C8C8C8] border border-[#C8C8C8] rounded px-4 py-2 hover:bg-[#C8C8C8] hover:text-[#333333] transition"
+                    className="inline-block text-[#2D2D2D] border border-[#EDEAE5] rounded px-4 py-2 hover:bg-[#C8C8C8] hover:text-[#333333] transition"
                   >
                     View Project
                   </a>
