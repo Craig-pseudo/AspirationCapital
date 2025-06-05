@@ -158,7 +158,7 @@ const Contact: React.FC = () => {
                 rel="noopener noreferrer"
                 className="hover:text-[#C8B88A] transition-colors"
               >
-                GitHub
+               
               </a>
             </li>
           </ul>

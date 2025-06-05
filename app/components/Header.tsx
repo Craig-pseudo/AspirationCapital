@@ -28,9 +28,6 @@ const Header = () => {
           <a href="#portfolio" className="hover:text-[#7b6e57] transition-colors duration-300">
             Portfolio
           </a>
-          <a href="#team" className="hover:text-[#7b6e57] transition-colors duration-300">
-            Team
-          </a>
           <a href="#why-choose-us" className="hover:text-[#7b6e57] transition-colors duration-300">
             Why Us
           </a>

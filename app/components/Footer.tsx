@@ -54,7 +54,6 @@ const Footer = () => {
             <a href="#about" className="hover:underline hover:text-[#C8B88A]">About Us</a>
             <a href="#investment-focus" className="hover:underline hover:text-[#C8B88A]">Investment Focus</a>
             <a href="#portfolio" className="hover:underline hover:text-[#C8B88A]">Portfolio</a>
-            <a href="#team" className="hover:underline hover:text-[#C8B88A]">Team</a>
             <a href="#contact" className="hover:underline hover:text-[#C8B88A]">Contact</a>
           </nav>
         </div>
