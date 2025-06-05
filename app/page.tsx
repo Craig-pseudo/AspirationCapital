@@ -11,8 +11,9 @@ export default function Home() {
     <div className="">
     <Header/>
     <About/>
-    <WhyChooseUs/>
+    
     <Portfolio/>
+    <WhyChooseUs/>
     <Contact/>
     <Footer/>
     </div>

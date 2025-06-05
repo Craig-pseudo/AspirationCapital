@@ -4,29 +4,65 @@ const WhyChooseUs = () => {
   return (
     <section
       id="why-choose-us"
-      className="bg-[#2D2D2D] text-[#C8C8C8] border-b-2 border-[#C8C8C8] py-8 px-6 md:px-6 font-sans w-full mx-auto"
+      className="relative bg-[#2D2D2D] text-[#FDFCF9] py-10 px-6 md:px-12 font-sans w-full overflow-hidden"
     >
-      <h2 className="text-3xl font-medium mb-8 tracking-wide drop-shadow-sm">
-        Why Choose Us
-      </h2>
+      
+      <div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: "url('/images/CapeTown.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          zIndex: 0,
+        }}
+      ></div>
 
-      <ul className="max-w-3xl list-disc list-inside space-y-4 text-lg leading-relaxed tracking-wide">
-        <li>
-          <strong>Experienced Team:</strong> Our team of experts brings years of experience in investment, advisory, and business growth strategies tailored for success.
-        </li>
-        <li>
-          <strong>Strategic Partnerships:</strong> We connect you with a vast network of industry leaders, helping unlock new opportunities and collaborations.
-        </li>
-        <li>
-          <strong>Innovative Solutions:</strong> We prioritize innovation and sustainability to ensure your investments are future-proof and impactful.
-        </li>
-        <li>
-          <strong>Customized Approach:</strong> Each client receives tailored strategies designed specifically to meet their unique goals and challenges.
-        </li>
-        <li>
-          <strong>Commitment to Growth:</strong> We don’t just invest capital — we invest time, resources, and passion to build lasting value.
-        </li>
-      </ul>
+      <div className="relative z-10 max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl md:text-3xl font-semibold mb-10 tracking-wide">
+          Why Choose Us
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-10 text-left">
+          <div className="space-y-6 text-lg leading-relaxed">
+            <div>
+              <h3 className="text-xl font-semibold mb-1 text-[#C8B88A]">Experienced Team</h3>
+              <p>
+                Our experts bring decades of success in venture capital, strategic advisory, and scaling enterprises globally.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-1 text-[#C8B88A]">Strategic Partnerships</h3>
+              <p>
+                We unlock doors to elite networks, providing access to high-level decision-makers and market-shaping alliances.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-1 text-[#C8B88A]">Innovative Solutions</h3>
+              <p>
+                Future-focused investments and sustainable strategies built to evolve with dynamic markets.
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-6 text-lg leading-relaxed">
+            <div>
+              <h3 className="text-xl font-semibold mb-1 text-[#C8B88A]">Customized Approach</h3>
+              <p>
+                We tailor strategies precisely to each client’s ambitions, risk profile, and market environment.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-1 text-[#C8B88A]">Commitment to Growth</h3>
+              <p>
+                Beyond capital — we invest time, vision, and care to foster long-term value and leadership.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

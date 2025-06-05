@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useState } from "react";
 
 const Footer = () => {
@@ -14,42 +15,53 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#333333] text-[#C8C8C8] px-4 md:px-8 py-8 font-sans w-full">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-12">
-        {/* Left: Branding */}
-        <div className="md:w-1/3 space-y-3">
-          <h3 className="text-xl font-semibold">Aspiration Capital</h3>
-          <p className="text-sm leading-relaxed">
+    <footer className="relative bg-[#2D2D2D] text-[#FDFCF9] px-6 md:px-12 py-10 font-sans border-t border-[#3C3C3C]">
+      {/* Optional texture layer */}
+      <div
+        className="absolute inset-0 z-0 opacity-10"
+        style={{
+          backgroundImage: "url('/images/contact-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      ></div>
+      <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+        {/* Brand + Social */}
+        <div className="space-y-3">
+          <h3 className="text-2xl font-semibold drop-shadow-lg">Aspiration Capital</h3>
+          <p className="text-sm leading-relaxed text-[#D0D0D0]">
             Empowering innovation by investing in visionary startups and sustainable futures.
           </p>
-          <div className="flex space-x-4 pt-2">
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-[#E0E0E0] text-sm">
+          <div className="flex space-x-4 pt-1 text-sm">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-[#C8B88A]">
               LinkedIn
             </a>
-            <a href="mailto:youremail@example.com" className="hover:text-[#E0E0E0] text-sm">
+            <a href="mailto:youremail@example.com" className="hover:underline hover:text-[#C8B88A]">
               Email
             </a>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-[#E0E0E0] text-sm">
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-[#C8B88A]">
               GitHub
             </a>
           </div>
         </div>
 
-        {/* Center: Quick Links */}
-        <div className="md:w-1/3 space-y-3">
-          <h4 className="text-lg font-semibold">Quick Links</h4>
-          <nav className="flex flex-col gap-2 text-sm">
-            <a href="#about" className="hover:underline hover:text-[#E0E0E0]">About Us</a>
-            <a href="#investment-focus" className="hover:underline hover:text-[#E0E0E0]">Investment Focus</a>
-            <a href="#portfolio" className="hover:underline hover:text-[#E0E0E0]">Portfolio</a>
-            <a href="#team" className="hover:underline hover:text-[#E0E0E0]">Team</a>
-            <a href="#contact" className="hover:underline hover:text-[#E0E0E0]">Contact</a>
+        {/* Quick Links */}
+        <div className="space-y-3">
+          <h4 className="text-lg font-semibold drop-shadow">Quick Links</h4>
+          <nav className="flex flex-col gap-1.5 text-sm text-[#D0D0D0]">
+            <a href="#about" className="hover:underline hover:text-[#C8B88A]">About Us</a>
+            <a href="#investment-focus" className="hover:underline hover:text-[#C8B88A]">Investment Focus</a>
+            <a href="#portfolio" className="hover:underline hover:text-[#C8B88A]">Portfolio</a>
+            <a href="#team" className="hover:underline hover:text-[#C8B88A]">Team</a>
+            <a href="#contact" className="hover:underline hover:text-[#C8B88A]">Contact</a>
           </nav>
         </div>
 
-        
-        <div className="md:w-1/3 space-y-3">
-          <h4 className="text-lg font-semibold">Subscribe to Our Newsletter</h4>
+        {/* Newsletter */}
+        <div className="space-y-3">
+          <h4 className="text-lg font-semibold drop-shadow">Subscribe to Our Newsletter</h4>
           {subscribed ? (
             <p className="text-green-400 text-sm">Thank you for subscribing!</p>
           ) : (
@@ -60,11 +72,11 @@ const Footer = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="p-2 rounded bg-[#444444] text-sm text-[#C8C8C8] border border-[#C8C8C8] focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
+                className="p-2 rounded bg-transparent border border-[#C8C8C8] text-sm text-[#FDFCF9] focus:outline-none focus:ring-2 focus:ring-[#7b6e57]"
               />
               <button
                 type="submit"
-                className="bg-[#7b6e57] text-[#333333] py-2 rounded font-semibold text-sm hover:bg-[#C8B88A] transition"
+                className="bg-[#7b6e57] text-[#2D2D2D] py-2 rounded font-semibold text-sm hover:bg-[#C8B88A] transition-colors"
               >
                 Subscribe
               </button>
@@ -73,12 +85,12 @@ const Footer = () => {
         </div>
       </div>
 
-      
-      <div className="mt-8 pt-6 border-t border-[#444444] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#999999]">
+      {/* Bottom Bar */}
+      <div className="relative z-10 mt-8 pt-4 border-t border-[#3C3C3C] flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-[#A0A0A0]">
         <p>&copy; {new Date().getFullYear()} Aspiration Capital. All rights reserved.</p>
         <div className="flex gap-4">
-          <a href="/privacy" className="hover:underline hover:text-[#E0E0E0]">Privacy Policy</a>
-          <a href="/terms" className="hover:underline hover:text-[#E0E0E0]">Terms of Service</a>
+          <a href="/privacy" className="hover:underline hover:text-[#C8B88A]">Privacy Policy</a>
+          <a href="/terms" className="hover:underline hover:text-[#C8B88A]">Terms of Service</a>
         </div>
       </div>
     </footer>
