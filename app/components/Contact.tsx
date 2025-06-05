@@ -127,14 +127,14 @@ const Contact: React.FC = () => {
 
           <button
             type="submit"
-            className="mt-6 w-full py-2 rounded transition bg-[#C8C8C8] text-[#333333] hover:bg-[#b0b0b0]"
+            className="mt-6 w-full py-2 rounded transition bg-[#7b6e57] text-[#333333] hover:bg-[#C8B88A]"
           >
             Send Message
           </button>
         </form>
       </div>
 
-      {/* Right: Social Links */}
+      
       <div className="md:w-1/2 mt-12 md:mt-0 md:pl-16 flex flex-col items-start ">
         <h3 className="text-2xl font-semibold mb-4">Connect with us</h3>
         <ul className="space-y-2 text-[#C8C8C8]">

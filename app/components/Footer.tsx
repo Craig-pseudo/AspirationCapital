@@ -47,7 +47,7 @@ const Footer = () => {
           </nav>
         </div>
 
-        {/* Right: Newsletter */}
+        
         <div className="md:w-1/3 space-y-3">
           <h4 className="text-lg font-semibold">Subscribe to Our Newsletter</h4>
           {subscribed ? (
@@ -64,7 +64,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="bg-[#C8C8C8] text-[#333333] py-2 rounded font-semibold text-sm hover:bg-[#b0b0b0] transition"
+                className="bg-[#7b6e57] text-[#333333] py-2 rounded font-semibold text-sm hover:bg-[#C8B88A] transition"
               >
                 Subscribe
               </button>
@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom row */}
+      
       <div className="mt-8 pt-6 border-t border-[#444444] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#999999]">
         <p>&copy; {new Date().getFullYear()} Aspiration Capital. All rights reserved.</p>
         <div className="flex gap-4">

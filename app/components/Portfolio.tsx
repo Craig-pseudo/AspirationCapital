@@ -61,7 +61,7 @@ const Portfolio: React.FC = () => {
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block text-[#2D2D2D] border border-[#EDEAE5] rounded px-4 py-2 hover:bg-[#C8C8C8] hover:text-[#333333] transition"
+                    className="inline-block text-[#2D2D2D] border bg-[#7b6e57] border-[#EDEAE5] rounded px-4 py-2 hover:bg-[#C8B88A] hover:text-[#333333] transition"
                   >
                     View Project
                   </a>
