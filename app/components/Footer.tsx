@@ -7,15 +7,44 @@ const Footer = () => {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError(null);
 
-    if (!email.trim()) return;
+    if (!email.trim()) {
+      setError("Please enter a valid email.");
+      return;
+    }
 
+    setLoading(true);
+
+    // Optional: check if email already exists
+    const { data: existing, error: checkError } = await supabase
+      .from("newsletter_subscribers")
+      .select("email")
+      .eq("email", email)
+      .single();
+
+    if (checkError && checkError.code !== 'PGRST116') { // Ignore "No rows" error code
+      setError("An error occurred. Please try again.");
+      setLoading(false);
+      return;
+    }
+    
+    if (existing) {
+      setError("This email is already subscribed.");
+      setLoading(false);
+      return;
+    }
+
+    // Insert email
     const { data, error } = await supabase
       .from("newsletter_subscribers")
       .insert([{ email }]);
+
+    setLoading(false);
 
     if (error) {
       setError("Subscription failed. Please try again.");
@@ -26,6 +55,7 @@ const Footer = () => {
       setError(null);
     }
   };
+
   return (
     <footer id="newsletter" className="relative bg-[#2D2D2D] text-[#FDFCF9] px-6 md:px-12 py-10 font-sans border-t border-[#3C3C3C]">
       
@@ -80,13 +110,18 @@ const Footer = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className="p-2 rounded bg-transparent border border-[#C8C8C8] text-sm text-[#FDFCF9] focus:outline-none focus:ring-2 focus:ring-[#7b6e57]"
+                disabled={loading}
               />
               <button
                 type="submit"
-                className="bg-[#7b6e57] text-[#2D2D2D] py-2 rounded font-semibold text-sm hover:bg-[#C8B88A] transition-colors"
+                disabled={loading}
+                className={`py-2 rounded font-semibold text-sm transition-colors ${
+                  loading ? "bg-gray-500 cursor-not-allowed" : "bg-[#7b6e57] text-[#2D2D2D] hover:bg-[#C8B88A]"
+                }`}
               >
-                Subscribe
+                {loading ? "Subscribing..." : "Subscribe"}
               </button>
+              {error && <p className="text-red-400 text-sm mt-1">{error}</p>}
             </form>
           )}
         </div>
