@@ -15,8 +15,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-[#2D2D2D] text-[#FDFCF9] px-6 md:px-12 py-10 font-sans border-t border-[#3C3C3C]">
-      {/* Optional texture layer */}
+    <footer id="newsletter" className="relative bg-[#2D2D2D] text-[#FDFCF9] px-6 md:px-12 py-10 font-sans border-t border-[#3C3C3C]">
+      
       <div
         className="absolute inset-0 z-0 opacity-10"
         style={{
@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-        {/* Brand + Social */}
+        
         <div className="space-y-3">
           <h3 className="text-2xl font-semibold drop-shadow-lg">Aspiration Capital</h3>
           <p className="text-sm leading-relaxed text-[#D0D0D0]">
@@ -41,24 +41,20 @@ const Footer = () => {
             <a href="mailto:youremail@example.com" className="hover:underline hover:text-[#C8B88A]">
               Email
             </a>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-[#C8B88A]">
-              GitHub
-            </a>
           </div>
         </div>
 
-        {/* Quick Links */}
+        
         <div className="space-y-3">
           <h4 className="text-lg font-semibold drop-shadow">Quick Links</h4>
           <nav className="flex flex-col gap-1.5 text-sm text-[#D0D0D0]">
             <a href="#about" className="hover:underline hover:text-[#C8B88A]">About Us</a>
-            <a href="#investment-focus" className="hover:underline hover:text-[#C8B88A]">Investment Focus</a>
-            <a href="#portfolio" className="hover:underline hover:text-[#C8B88A]">Portfolio</a>
+            <a href="#service" className="hover:underline hover:text-[#C8B88A]">Our Services</a>
             <a href="#contact" className="hover:underline hover:text-[#C8B88A]">Contact</a>
           </nav>
         </div>
 
-        {/* Newsletter */}
+        
         <div className="space-y-3">
           <h4 className="text-lg font-semibold drop-shadow">Subscribe to Our Newsletter</h4>
           {subscribed ? (
@@ -84,7 +80,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      
       <div className="relative z-10 mt-8 pt-4 border-t border-[#3C3C3C] flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-[#A0A0A0]">
         <p>&copy; {new Date().getFullYear()} Aspiration Capital. All rights reserved.</p>
         <div className="flex gap-4">
