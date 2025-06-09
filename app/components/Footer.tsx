@@ -1,19 +1,31 @@
 'use client';
 
 import React, { useState } from "react";
+import { supabase } from "@/lib/supabaseClient";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) {
+
+    if (!email.trim()) return;
+
+    const { data, error } = await supabase
+      .from("newsletter_subscribers")
+      .insert([{ email }]);
+
+    if (error) {
+      setError("Subscription failed. Please try again.");
+      console.error(error);
+    } else {
       setSubscribed(true);
       setEmail("");
+      setError(null);
     }
   };
-
   return (
     <footer id="newsletter" className="relative bg-[#2D2D2D] text-[#FDFCF9] px-6 md:px-12 py-10 font-sans border-t border-[#3C3C3C]">
       
